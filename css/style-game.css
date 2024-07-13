@@ -1,0 +1,242 @@
+body {
+    font-family: "Lexend", sans-serif;
+    background-color: #f0f0f0; /* Putih cerah untuk latar belakang */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    background-color: #fff; /* Putih untuk kontainer */
+    padding: 20px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 75%;
+    max-width: 1200px;
+    height: 695px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 53px; /* Ukuran font lebih besar */
+    margin-top: 0px;
+}
+
+#question-container {
+    margin-bottom: -10px;
+}
+
+#question {
+    font-size: 25px; /* Ukuran teks pertanyaan lebih besar */
+    color: #333; /* Warna teks gelap */
+}
+
+#answer-table-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Kurangi jarak antar tabel */
+    margin-bottom: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 49%; /* Sesuaikan lebar tabel */
+    background-color: #e0e0e0; /* Latar belakang terang */
+    color: #333; /* Warna teks gelap */
+    border-radius: 5px;
+    font-size: 230%; /* Ukuran font tabel */
+}
+
+td {
+    border: 1px solid #ccc; /* Warna border lebih terang */
+    padding: 10px;
+    text-align: center;
+    width: 100%; /* Sesuaikan lebar sel */
+    height: 50px;
+}
+
+#input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+#answer-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#answer-container input {
+    padding: 10px;
+    width: 200px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#answer-container button {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(26, 26, 26); /* Warna tombol biru */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#chances-container {
+    display: flex;
+    align-items: center;
+    font-weight: 200;
+}
+
+#result-container {
+    margin-bottom: 20px;
+}
+
+#result {
+    font-weight: 100;
+}
+
+#result.error {
+    color: red;
+}
+
+#result.correct {
+    color: rgb(18, 168, 18);
+}
+
+#game-over-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#game-over-container button {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #FF4136; /* Warna tombol merah */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Gaya untuk tombol menu utama */
+#game-over-container button:nth-child(2) {
+    background-color: #007BFF; /* Warna tombol biru */
+}
+
+
+/* Tombol mode gelap/terang */
+#theme-toggle-button {
+    position: absolute;
+    top: 24px;
+    right: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#theme-toggle-button img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Mode Gelap */
+body.dark-mode {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+body.dark-mode .container {
+    background-color: #444;
+    color: #f0f0f0;
+}
+
+body.dark-mode #question {
+    color: #f0f0f0;
+}
+
+body.dark-mode table {
+    background-color: #555;
+    color: #f0f0f0;
+}
+
+body.dark-mode td {
+    border: 1px solid #777;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .container {
+        width: 80%;
+        height: 93%;
+    }
+
+    #input-container {
+        margin-bottom: 5px;
+    }
+
+    #game-over-container {
+        margin-top: -10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    td {
+        font-size: 75%;
+    }
+
+    #answer-container input {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    td {
+        font-size: 55%;
+        padding: 5px;
+    }
+
+    #answer-container input {
+        width: 100px;
+    }
+
+    #answer-container button {
+        padding: 8px;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Buster Challenge</title>
+    <link rel="icon" href="/img/My-Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style-game.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <button id="theme-toggle-button" onclick="toggleTheme()">
+            <img id="theme-icon" src="/img/moon.svg" alt="Toggle Theme">
+        </button>
+        <h1>Brain Buster Challenge</h1>
+        <div id="question-container">
+            <p id="question">Pertanyaan akan muncul di sini</p>
+        </div>
+        <div id="answer-table-container">
+            <table class="correct-answers-table" id="correct-answers-table-1">
+                <tbody>
+                    <!-- 5 baris untuk jawaban -->
+                    <tr><td></td></tr><tr><td></td></tr><tr><td></tr><tr><td></td></tr><tr><td></td></tr>
+                </tbody>
+            </table>
+            <table class="correct-answers-table" id="correct-answers-table-2">
+                <tbody>
+                    <!-- 5 baris untuk jawaban -->
+                    <tr><td></td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr><tr><td></td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="input-container">
+            <div id="answer-container">
+                <input type="text" id="answer" placeholder="Your Answer" onkeypress="handleKeyPress(event)">
+                <button onclick="submitAnswer()">Jawab</button>
+            </div>
+            <div id="chances-container">
+                <p id="chances">Kesempatan: 3</p>
+            </div>
+            <div id="points-container">
+                <p id="points">Poin: 0</p>
+            </div>
+        </div>
+        <div id="result-container">
+            <p id="result">Hasil jawaban akan muncul di sini</p>
+        </div>
+        <div id="game-over-container" style="display: none;">
+            <button onclick="restartGame()">Restart Game</button>
+            <button onclick="goToMenu()">Menu Utama</button>
+        </div>        
+    </div>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="js/script-game.js"></script>
+</body>
+</html>
