@@ -12,10 +12,10 @@ function toggleDarkMode() {
     localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
 
     if (body.classList.contains('dark-mode')) {
-        modeIcon.src = '/assest/img/sun.svg';
+        modeIcon.src = '/assest/images/sun.svg';
         darkModeButton.style.backgroundColor = '#333';
     } else {
-        modeIcon.src = '/assest/img/moon.svg';
+        modeIcon.src = '/assest/images/moon.svg';
         darkModeButton.style.backgroundColor = '#f0f0f0';
     }
 }
@@ -24,10 +24,10 @@ window.onload = function() {
     const darkMode = localStorage.getItem('darkMode') === 'true';
     if (darkMode) {
         document.body.classList.add('dark-mode');
-        document.getElementById('mode-icon').src = '/assest/img/sun.svg';
+        document.getElementById('mode-icon').src = '/assest/images/sun.svg';
         document.getElementById('dark-mode-button').style.backgroundColor = '#333';
     } else {
-        document.getElementById('mode-icon').src = '/assest/img/moon.svg';
+        document.getElementById('mode-icon').src = '/assest/images/moon.svg';
         document.getElementById('dark-mode-button').style.backgroundColor = '#f0f0f0';
     }
 }

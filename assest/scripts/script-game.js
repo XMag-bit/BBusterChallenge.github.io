@@ -214,9 +214,9 @@ function clearAnswerTable() {
 function setThemeIcon() {
     const themeIcon = document.getElementById("theme-icon");
     if (document.body.classList.contains("dark-mode")) {
-        themeIcon.src = "/assest/img/sun.svg";
+        themeIcon.src = "/assest/images/sun.svg";
     } else {
-        themeIcon.src = "/assest/img/moon.svg";
+        themeIcon.src = "/assest/images/moon.svg";
     }
 }
 
