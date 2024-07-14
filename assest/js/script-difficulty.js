@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const darkMode = localStorage.getItem('darkMode') === 'true';
     if (darkMode) {
         document.body.classList.add('dark-mode');
-        document.getElementById('mode-icon').src = '/img/sun.svg';
+        document.getElementById('mode-icon').src = '/assest/img/sun.svg';
     } else {
-        document.getElementById('mode-icon').src = '/img/moon.svg';
+        document.getElementById('mode-icon').src = '/assest/img/moon.svg';
     }
 })
 
